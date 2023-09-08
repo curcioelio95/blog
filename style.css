@@ -731,7 +731,7 @@ footer .social i:hover{
   }
 
   .location_card {
-    padding: 0.5rem;
+    padding: 0.5rem !important;
   }
 
   .heading{
