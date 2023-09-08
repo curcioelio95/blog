@@ -1033,7 +1033,7 @@ footer .social i:hover{
 @media only screen and (min-height: 844px)
 { 
   .nav .nav-brand img{
-    max-width: 65%; 
+    max-width: 60% !important; 
   }
 
   .world{
