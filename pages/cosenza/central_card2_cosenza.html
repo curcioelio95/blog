@@ -1,4 +1,4 @@
-<section>
+<section class="location_card">
   <div class="content">
     
     <div class="content-text">
@@ -137,46 +137,50 @@ color: #444;
 }
 
 @media screen and (max-width: 756px) {
-.content {
-  display: table-column;
-  height: fit-content;
-  flex-direction: column-reverse;
-  text-align: center;
-  height: auto;
-}
+      .location_card {
+        padding: 0.5rem !important;
+      }
+    .content {
+      display: table-column;
+      height: fit-content;
+      
+      text-align: center;
+      height: auto;
+    }
 
-.content-img {
-  order: 2;
-  border-radius: 0px 0px 20px 20px;
-}
+    .content-img {
+      flex: 1.5;
+      border-radius: 20px 20px 0px 0px;
+    }
 
-.content-text{
-  order: 1;
-  padding-top: 1%;
-}
+    .content-text{
+      flex: 1;
+      padding-top: 1%;
+      padding: 1rem !important;
+    }
 
-.content-text .content-title {
-  font-size: 1.5rem;
-}
+    .content-text .content-title {
+      font-size: 1.5rem !important;
+    }
 
-.content-text .content-subtitle {
-  font-size: 1rem;
-}
+    .content-text .content-subtitle {
+      font-size: 1rem !important;
+    }
 
-.content-text .content-paragraph {
-  font-size: 1rem;
-  text-align: justify;
-}
-.content-text .content-paragraph2 {
-  font-size: 1rem;
-  text-align: justify;
-}
+    .content-text .content-paragraph {
+      font-size: 1rem !important;
+      text-align: justify;
+    }
+    .content-text .content-paragraph2 {
+      font-size: 1rem !important;
+      text-align: justify;
+    }
 
 
-.content-img {
-    height: 350px;
-    width: 100%;
-}
+    .content-img {
+        height: 350px;
+        width: 100%;
+  }
 }
 
 @media screen and (max-width: 456px) {
