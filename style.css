@@ -699,6 +699,57 @@ footer .social i:hover{
 
 /*----X----- FOOTER ----X--- */
 
+/* media query for iphone */
+@media only screen and (min-height: 844px)
+{ 
+  .nav .nav-brand img{
+    max-width: 60% !important; 
+  }
+
+  .world{
+    margin: 0 !important;
+  }
+  .world{
+    padding-top: 10%;
+  }
+
+  .world_img{
+    width: 100% !important;
+    height: 100; /* Altezza ridotta per adattarsi al contenuto testuale */
+  }
+
+  .ui {
+    box-shadow: inset 2px 2px 55px rgba(53, 144, 255, 0.6) !important;
+  }
+  .contentBxWorld{
+    width: 80%;
+    padding-bottom: 5%;
+  }
+
+  .contentBxWorld openVideoPopup{
+    text-align: center;
+  }
+
+  section {
+    padding: 0.5rem;
+  }
+
+  .heading{
+    text-align: center;
+  }
+
+  #contact .col-md-6 {
+      width: 95% !important; /* Occupa tutta la larghezza quando lo schermo è piccolo */
+  }
+  #contact .col-md-6:last-child textarea {
+      height: 300px; /* Altezza maggiore per il campo del messaggio quando lo schermo è piccolo */
+  }
+  .inputText{
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+}
+
 @media screen and (min-width: 2560px){
   .heading{
     font-size: 70px;
@@ -1028,54 +1079,4 @@ footer .social i:hover{
     width: 100% !important;
   }
 
-}
-/* media query for iphone */
-@media only screen and (min-height: 844px)
-{ 
-  .nav .nav-brand img{
-    max-width: 60% !important; 
-  }
-
-  .world{
-    margin: 0 !important;
-  }
-  .world{
-    padding-top: 10%;
-  }
-
-  .world_img{
-    width: 100% !important;
-    height: 100; /* Altezza ridotta per adattarsi al contenuto testuale */
-  }
-
-  .ui {
-    box-shadow: inset 2px 2px 55px rgba(53, 144, 255, 0.6);
-  }
-  .contentBxWorld{
-    width: 80%;
-    padding-bottom: 5%;
-  }
-
-  .contentBxWorld openVideoPopup{
-    text-align: center;
-  }
-
-  section {
-    padding: 0.5rem;
-  }
-
-  .heading{
-    text-align: center;
-  }
-
-  #contact .col-md-6 {
-      width: 95% !important; /* Occupa tutta la larghezza quando lo schermo è piccolo */
-  }
-  #contact .col-md-6:last-child textarea {
-      height: 300px; /* Altezza maggiore per il campo del messaggio quando lo schermo è piccolo */
-  }
-  .inputText{
-    flex-direction: column !important;
-    width: 100% !important;
-  }
 }
