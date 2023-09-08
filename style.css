@@ -734,6 +734,8 @@ footer .social i:hover{
     padding: 0.5rem !important;
   }
 
+
+
   .heading{
     text-align: center;
   }
@@ -1001,11 +1003,11 @@ footer .social i:hover{
   }
 
   #text-container h2{
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
   }
 
   #text-container p{
-    font-size: 1rem;
+    font-size: 1rem !important;
     text-align: justify;
   }
 
