@@ -972,6 +972,24 @@ footer .social i:hover{
 } */
 
 @media (max-width: 768px) {
+  .btn-main{
+    margin: 1.8em;
+    padding: 0.8em 2.5em;
+    font-size: 0.8em;
+  }
+
+  
+  .nav .nav-items .nav-link{
+       font-size: 1.2rem;
+  }
+  /* .wrapper{
+    flex-direction: row;
+  } */
+
+  .card{
+    width: 200px !important;
+    height: 100px;
+  }
   .world{
     margin: 0 !important;
   }
@@ -1010,3 +1028,41 @@ footer .social i:hover{
   }
 
 }
+/* media query for iphone */
+@media only screen and (min-height: 844px)
+{ .world{
+  margin: 0 !important;
+}
+.world{
+  padding-top: 10%;
+}
+
+.world_img{
+  width: 100% !important;
+  height: 100; /* Altezza ridotta per adattarsi al contenuto testuale */
+}
+
+.contentBxWorld{
+  width: 80%;
+  padding-bottom: 5%;
+}
+
+.contentBxWorld openVideoPopup{
+  text-align: center;
+}
+
+
+.heading{
+  text-align: center;
+}
+
+#contact .col-md-6 {
+    width: 95% !important; /* Occupa tutta la larghezza quando lo schermo è piccolo */
+}
+#contact .col-md-6:last-child textarea {
+    height: 300px; /* Altezza maggiore per il campo del messaggio quando lo schermo è piccolo */
+}
+.inputText{
+  flex-direction: column !important;
+  width: 100% !important;
+}}
