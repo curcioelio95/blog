@@ -734,6 +734,13 @@ footer .social i:hover{
     padding: 0.5rem !important;
   }
 
+  .map__controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
 
 
   .heading{
