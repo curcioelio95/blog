@@ -1031,42 +1031,48 @@ footer .social i:hover{
 }
 /* media query for iphone */
 @media only screen and (min-height: 844px)
-{ .world{
-  margin: 0 !important;
-}
-.world{
-  padding-top: 10%;
-}
+{ 
+  .nav .nav-brand img{
+    max-width: 65%; 
+  }
 
-.world_img{
-  width: 100% !important;
-  height: 100; /* Altezza ridotta per adattarsi al contenuto testuale */
-}
+  .world{
+    margin: 0 !important;
+  }
+  .world{
+    padding-top: 10%;
+  }
 
-.contentBxWorld{
-  width: 80%;
-  padding-bottom: 5%;
-}
+  .world_img{
+    width: 100% !important;
+    height: 100; /* Altezza ridotta per adattarsi al contenuto testuale */
+  }
 
-.contentBxWorld openVideoPopup{
-  text-align: center;
-}
+  .contentBxWorld{
+    width: 80%;
+    padding-bottom: 5%;
+  }
 
-section {
-  padding: 0.5rem;
-}
+  .contentBxWorld openVideoPopup{
+    text-align: center;
+  }
 
-.heading{
-  text-align: center;
-}
+  section {
+    padding: 0.5rem;
+  }
 
-#contact .col-md-6 {
-    width: 95% !important; /* Occupa tutta la larghezza quando lo schermo è piccolo */
+  .heading{
+    text-align: center;
+  }
+
+  #contact .col-md-6 {
+      width: 95% !important; /* Occupa tutta la larghezza quando lo schermo è piccolo */
+  }
+  #contact .col-md-6:last-child textarea {
+      height: 300px; /* Altezza maggiore per il campo del messaggio quando lo schermo è piccolo */
+  }
+  .inputText{
+    flex-direction: column !important;
+    width: 100% !important;
+  }
 }
-#contact .col-md-6:last-child textarea {
-    height: 300px; /* Altezza maggiore per il campo del messaggio quando lo schermo è piccolo */
-}
-.inputText{
-  flex-direction: column !important;
-  width: 100% !important;
-}}
