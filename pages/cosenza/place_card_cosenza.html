@@ -154,8 +154,12 @@
 
     /* media query for iphone */
     @media only screen and (min-height: 840px){
-        .map__controls button {
-            font-size: 0.7em !important;
+        .map__controls {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
         }
     }
     
