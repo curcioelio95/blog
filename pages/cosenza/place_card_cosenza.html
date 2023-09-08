@@ -102,10 +102,12 @@
         }
 
         .map__controls {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    }
+            display: grid !important;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
 
     .map__controls button {
     margin: 0.2em;
