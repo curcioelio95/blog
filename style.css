@@ -735,7 +735,7 @@ footer .social i:hover{
   }
 
   .map__controls {
-    display: grid;
+    display: grid !important;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     justify-content: center;
