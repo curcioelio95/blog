@@ -1051,6 +1051,9 @@ footer .social i:hover{
   text-align: center;
 }
 
+section {
+  padding: 0.5rem;
+}
 
 .heading{
   text-align: center;
