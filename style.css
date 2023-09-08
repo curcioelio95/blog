@@ -1048,6 +1048,9 @@ footer .social i:hover{
     height: 100; /* Altezza ridotta per adattarsi al contenuto testuale */
   }
 
+  .ui {
+    box-shadow: inset 2px 2px 100px rgba(53, 144, 255, 0.6);
+  }
   .contentBxWorld{
     width: 80%;
     padding-bottom: 5%;
