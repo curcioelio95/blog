@@ -1,0 +1,351 @@
+<div class="map__container">
+    <div id='map' ></div>
+    <div id="text-container">
+        <div id="text_info_card">
+            <h2 id="title_info">Our Map!</h2>
+            <p id="subtitle_info">This is a sample text column.</p>
+            <p id="desctiption_info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur esse aut deleniti magni. Quaerat unde non beatae hic veniam necessitatibus reiciendis reprehenderit tempore alias maxime delectus, ullam aut adipisci, aliquid velit dolores molestiae, eius nihil nam et ut fugiat iste perspiciatis quis? Veniam accusantium ut recusandae eaque quas</p>
+            <div class="map__controls">
+                <button id="style1-button"><i class="fas fa-map-marked-alt"></i> Explore</button>
+                <button id="style2-button"> <i class="fas fa-utensils"></i> Eat</button>
+                <button id="style3-button">  <i class="fas fa-camera"></i> Shots</button>
+                <button id="style4-button">  <i class="fas fa-motorcycle"></i> Trip</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<style>
+    a,p{
+        font-family: Roboto;
+        color: var(--text-gray) !important;
+        font-size: 1em;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+    a{
+        font-weight: bold;
+    }
+    strong{
+        font-family: Roboto;
+        color: var(--text-gray) !important;
+        font-size: 1.3em;
+        font-weight: bold;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+    .map__container{
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+    #map{
+        flex:2;
+        width: 50%;
+        height: 80%;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 10px 10px 15px rgba(0,0,0,0.5);
+    }
+
+    #text-container {
+            flex: 0.5;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        #text-container h2{
+            font-size: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            font-family: Montserrat;
+            color: var(--text-gray);
+        }
+
+        #text-container p{
+            font-family: Roboto;
+            color: var(--text-gray) !important;
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        #text_info_card {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #button:hover {
+            background-color: #0056b3;
+        }
+
+        .map__controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    }
+
+    .map__controls button {
+    margin: 0.2em;
+    padding: 0.7em 2em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    border-radius: 2em;
+    }
+
+    #style2-button {
+    background-color: #28a745;
+    }
+
+    #style3-button {
+    background-color: #dc3545;
+    }
+
+    #style4-button {
+    background-color: #FFA500;
+    }
+
+    button:hover {
+    background-color: #0056b3;
+    }
+
+    button#style2-button:hover {
+    background-color: #218838;
+    }
+
+    button#style3-button:hover {
+    background-color: #c82333;
+    }
+
+    button#style4-button:hover {
+    background-color: #a36a00;
+    }
+        
+    .symbol {
+        text-decoration: none; /* Rimuove la sottolineatura del link */
+        color: transparent; /* Rende il testo del link trasparente */
+    }
+
+</style>
+   
+
+
+<script>
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZWxpb21hdHRlbzk1IiwiYSI6ImNsbHAzbTZjbDAxeGMzbXF6dTF0aTJ6OTEifQ.UbtyyNO3zrxCy9csW01oaA';
+    const map = new mapboxgl.Map({
+    container: 'map',
+    // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+    style: 'mapbox://styles/mapbox/streets-v12',
+    center: [16.250193, 39.309993],
+    zoom: 11.15
+    });
+    
+
+    const mpSets = [
+        [
+            // Array di posizioni per lo Style 1
+            {
+                'name':'loc 1', 
+                'coordinates': [16.250193, 39.309993],
+                'color': '#007bff',
+                'properties': {
+                'description':
+                '<strong>Mad Men Season Five Finale Watch Party</strong><p>Head to Lounge 201 (201 Massachusetts Avenue NE) Sunday for a <a href="http://madmens5finale.eventbrite.com/" target="_blank" title="Opens in a new window">Mad Men Season Five Finale Watch Party</a>, complete with 60s costume contest, Mad Men trivia, and retro food and drink. 8:00-11:00 p.m. $10 general admission, $20 admission and two hour open bar.</p>'
+                },
+            },
+            {
+                'name':'loc 2', 
+                'coordinates': [16.26, 39.309993],
+                'color': '#007bff',
+                'properties': {
+                'description':
+                '<strong>New place</strong><p>scopri questo posto <a href="http://madmens5finale.eventbrite.com/" target="_blank" title="cliccando qui"> qui</a>, nel resto del sito scoprirai altre cose.</p>'
+                },
+            },
+           
+        ],
+        [
+            {
+                'name':'loc 3', 
+                'coordinates': [16.265, 39.32],
+                'color': '#28a745',
+                'properties': {
+                'description':
+                '<strong>New place</strong><p>scopri questo posto <a href="http://madmens5finale.eventbrite.com/" target="_blank" title="cliccando qui"> qui</a>, nel resto del sito scoprirai altre cose.</p>'
+                },
+            },
+            {
+                'name':'loc 4', 
+                'coordinates': [16.22, 39.304],
+                'color': '#28a745',
+                'properties': {
+                'description':
+                '<strong>New place</strong><div style="text-align:center"><img width="150" height="150" src="images/cosenza/pic_cs_2.jpg"/></div><p>Vieni a scoprire questo posto <a href="http://www.castellocosenza.it/" target="_blank" title="scopri il castello"> cliccando qui</a>, nel resto del sito scoprirai altre cose.</p>'
+                },
+            }
+        ],
+        [
+            {
+                'name':'loc 5', 
+                'coordinates': [16.465, 39.22],
+                'color': '#dc3545',
+                'properties': {
+                'description':
+                '<strong>New place</strong><p>scopri questo posto <a href="http://madmens5finale.eventbrite.com/" target="_blank" title="cliccando qui"> qui</a>, nel resto del sito scoprirai altre cose.</p>'
+                },
+            },
+            {
+                'name':'loc 6', 
+                'coordinates': [16.32, 39.104],
+                'color': '#dc3545',
+                'properties': {
+                'description':
+                '<strong>New place</strong><div style="text-align:center"><img width="150" height="150" src="images/cosenza/pic_cs_2.jpg"/></div><p>Vieni a scoprire questo posto <a href="http://www.castellocosenza.it/" target="_blank" title="scopri il castello"> cliccando qui</a>, nel resto del sito scoprirai altre cose.</p>'
+                },
+            }
+        ],
+        [
+            {
+                'name':'Camigliatllo', 
+                'coordinates': [16.44396137834741, 39.339140069521505],
+                'color': '#FFA500',
+                'properties': {
+                'description':
+                '<strong>Camigliatello Silano</strong><p>scopri questo posto <a href="http://madmens5finale.eventbrite.com/" target="_blank" title="cliccando qui"> qui</a>, nel resto del sito scoprirai altre cose.</p>'
+                 },
+            },
+            {
+                'name':'Amantea', 
+                'coordinates': [16.07605117497829, 39.133969576929445],
+                'color': '#FFA500',
+                'properties': {
+                'description':
+                '<strong>Amantea</strong><div style="text-align:center"><img width="150" height="150" src="images/cosenza/pic_cs_2.jpg"/></div><p>Vieni a scoprire questo posto <a href="http://www.castellocosenza.it/" target="_blank" title="scopri il castello"> cliccando qui</a>, nel resto del sito scoprirai altre cose.</p>'
+                },
+            }
+        ]
+    ];
+ 
+    
+let currentMarkers = [];
+
+function clearMarkers() {
+    // Trova tutti gli elementi dei marker con la classe mapboxgl-marker
+    const markerElements = document.querySelectorAll('.mapboxgl-marker');
+
+    // Itera attraverso gli elementi e rimuovili
+    markerElements.forEach((markerElement) => {
+        markerElement.remove();
+    });
+
+    if (map.getLayer('markers')) {
+        map.removeLayer('markers');
+    }
+    if (map.getSource('markers')) {
+        map.removeSource('markers');
+    }
+
+    map.on('load', () => {})
+    currentMarkers = []; // Svuota l'array dei marker correnti
+}
+
+function addMarkersToSource(mpSet) {
+    clearMarkers();
+    
+    const sourceId = 'markers';
+    const features = mpSet.map((e) => {
+        const coordinates = e.coordinates.slice();
+        const description = e.properties.description;
+        const color = e.color;
+
+        const popup = new mapboxgl.Popup({ closeOnClick: true })
+            .setHTML(description);
+
+        const marker = new mapboxgl.Marker({
+            color
+        })
+            .setLngLat(coordinates)
+            .setPopup(popup)
+            .addTo(map);
+
+        return {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: coordinates
+            },
+            properties: {
+                title: e.name,
+                description: e.properties.description,
+                color: e.color
+            }
+        };
+    });
+
+    map.addSource(sourceId, {
+        type: 'geojson',
+        data: {
+            type: 'FeatureCollection',
+            features: features
+        }
+    });
+
+    map.addLayer({
+        id: 'markers',
+        type: 'symbol',
+        source: sourceId,
+        layout: {
+            // Imposta il layout del tuo layer
+        }
+    });
+
+    currentMarkers = mpSet;
+    console.log(currentMarkers);
+    map.on('load', () => {})
+}
+    
+
+document.getElementById('style1-button').addEventListener('click', () => {
+    addMarkersToSource(mpSets[0]);
+});
+
+document.getElementById('style2-button').addEventListener('click', () => {
+    addMarkersToSource(mpSets[1]);
+});
+
+document.getElementById('style3-button').addEventListener('click', () => {
+    addMarkersToSource(mpSets[2]);
+});
+
+document.getElementById('style4-button').addEventListener('click', () => {
+    addMarkersToSource(mpSets[3]);
+});
+    
+addMarkersToSource(mpSets[0]) 
+    
+</script>

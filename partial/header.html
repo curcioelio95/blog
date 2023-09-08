@@ -1,0 +1,128 @@
+<nav class="nav nav-2" id="nav">
+    <div class="nav-menu flex-row" id="navMenu">
+<div class="nav-brand">
+  <a href="#banner" id="navbar__logo">
+    <img src="images/logoW.svg" alt="Logo">
+    &nbsp;JTB
+  </a>
+</div>
+<div class="toggle-collapse">
+  <div class="toggle-icons">
+    <i class="fa fa-bars"></i>
+  </div>
+</div>
+<div class="nav-items">
+  <ul>
+    <li>
+      <a class="nav-link" href="#about">About</a>
+    </li>
+    <li>
+      <a class="nav-link" href="#world">Destinations</a>
+      <ul>
+        <li>
+          <a href="#destinations">Italy</a>
+          <ul>
+            <li><a href="#location" solar-page="pages/cosenza/cosenza.html" solar-selector="main">Cosenza</a></li>
+            <li><a href="#">Firenze</a></li>
+            <li><a href="#">Roma</a></li>
+            <li><a href="#">Venezia</a></li>
+            <li><a href="#">Milano</a></li>
+            <li><a href="#">Torino</a></li>
+            <li><a href="https://www.google.com" target="_blank">Northen Territory</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Indonesia</a>
+          <ul>
+            <li><a href="#">Bali</a></li>
+            <li><a href="#">Lombok</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Singapore</a>
+        </li>
+        <li>
+          <a href="#">Malaysia</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a class="nav-link" solar-page="partial/testimonials.html" solar-selector="main">Testimonials</a>
+    </li>
+    <li>
+      <a class="nav-link" solar-page="partial/contact.html" solar-selector="main">Contact</a>
+    </li>
+  </ul>
+</div>
+<div class="social">
+  <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-twitter"></i></a>
+  <a href="https://www.youtube.com/@thesgambifiu" target="_blank" title="On this channel, you may find several pleces."><i class="fab fa-youtube"></i></a>
+</div>
+</nav>
+</header>
+
+<style>
+    .nav-brand {
+        text-align: center; /* Centra il contenuto horizontalmente */
+    }
+
+    #navbar__logo {
+        max-height: 100% !important;
+        display: inline-flex; /* Utilizza il layout flessibile */
+        align-items: center; /* Centra verticalmente l'immagine e il testo */
+        justify-content: center;
+        padding: 5px 0 0 30px;
+        color: #fff;
+    }
+
+   
+</style>
+
+<script>
+  /*------------ TOGGLE MENU -----------------*/
+  $nav = $(".nav");
+  $navItems = $(".nav-items");
+  $social = $(".social");
+  $icon = $(".fa-bars");
+  $banner = $(".banner");
+  $navLink = $(".nav-link");
+  $scrollTop = $(".scrollTop");
+  $brand = $(".nav-brand");
+  $dropdown = $(".dropdown");
+
+  $bodyWidth = $('body').width();
+
+  $(window).resize(function() {
+  if ($(window).width() >= 982) {
+      $nav.removeClass('collapse');
+  }
+  }).resize();
+
+  $icon.click(function(){
+    $nav.toggleClass("collapse");
+  });
+
+  $navLink.click(function(){
+    $nav.removeClass('collapse');
+  });
+
+  $dropdown.click(function(){
+    $nav.removeClass('collapse');
+  })
+
+  $brand.click(function(){
+    $nav.removeClass('collapse');
+  });
+
+  /*------------ SCROLL TOGGLE MENU -----------------*/
+
+  $(document).scroll(function(){
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    $scrollTop.toggleClass('bannerScrolled', $(this).scrollTop() > $banner.height());
+  });
+
+  /*------X----- SCROLL TOGGLE MENU --------X--------*/
+</script>
+

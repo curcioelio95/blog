@@ -1,0 +1,96 @@
+<section class="video">
+    <a id="openVideoPopup" type="button" class="btn-vid" href="#">Open Video</a>
+    <div id="videoPopup" class="popup">
+    <div class="popup-content">
+        <span id="closeVideoPopup" class="close">&times;</span>
+        <video controls>
+        <source src="images/GX010038.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+    </div>
+    </div>
+</section>
+
+
+<style>
+    .video{
+        margin: 5% 0% ;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn-vid {
+    display: flex;
+color:  var(--gunmetal);
+margin: 1.8em;
+border: 2px solid  var(--gunmetal);
+background:  white;
+border-radius: 2em;
+padding: 1em 3em;
+font-size: 1em;
+font-weight: bold;
+outline: none;
+cursor: pointer;
+}
+
+.btn-vid:hover {
+
+background-color: rgba(51, 60, 70, 0.3);
+}
+</style>
+
+
+<script>
+    // Get the elements
+const openPopupButton = document.getElementById('openVideoPopup');
+const closePopupButton = document.getElementById('closeVideoPopup');
+const videoPopup = document.getElementById('videoPopup');
+
+// Open the video popup
+openPopupButton.addEventListener('click', () => {
+  videoPopup.style.display = 'block';
+});
+
+// Close the video popup
+closePopupButton.addEventListener('click', () => {
+  videoPopup.style.display = 'none';
+});
+
+// Close the video popup when clicking outside the popup
+window.addEventListener('click', (event) => {
+  if (event.target === videoPopup) {
+    videoPopup.style.display = 'none';
+  }
+});
+
+</script>
