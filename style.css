@@ -700,7 +700,7 @@ footer .social i:hover{
 /*----X----- FOOTER ----X--- */
 
 /* media query for iphone */
-@media only screen and (min-height: 844px)
+@media only screen and (min-height: 840px)
 { 
   .nav .nav-brand img{
     max-width: 60% !important; 
