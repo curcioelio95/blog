@@ -730,7 +730,7 @@ footer .social i:hover{
     text-align: center;
   }
 
-  .location_card {
+  .location_card, .location2_card{
     padding: 0.5rem !important;
   }
 
