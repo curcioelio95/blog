@@ -197,6 +197,15 @@
         ],
         // place to eat
         [
+        {
+                'name':'Il Cugino', 
+                'coordinates': [16.250639023612166, 39.236666401220816],
+                'color': '#28a745',
+                'properties': {
+                'description':
+                '<strong>Osteria dal Cugino</strong><p>Ottimo posto dove provare prodotti tipici. <a href="https://www.osteriadalcugino.it/" target="_blank" title="clicca qui"> website</a></p>'
+                },
+            },
             {
                 'name':'loc 3', 
                 'coordinates': [16.441248062620843, 39.33831909443026],
@@ -331,7 +340,7 @@ function addMarkersToSource(mpSet) {
         }
     });
 
-    map.setZoom(9.5);
+    map.setZoom(8.5);
     currentMarkers = mpSet;
     console.log(currentMarkers);
     map.on('load', () => {})
