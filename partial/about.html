@@ -12,7 +12,7 @@
             <div id="videoPopup" class="popup">
             <div class="popup-content">
                 <span id="closeVideoPopup" class="close">&times;</span>
-                <video controls>
+                <video controls class="video">
                 <source src="images/GX010038.mp4" type="video/mp4">
                 Your browser does not support the video tag.
                 </video>
@@ -87,6 +87,12 @@
           width: 80%; /* Regola la larghezza della popup per adattarla ai dispositivi mobili */
           padding: 10px; /* Riduci il padding per dispositivi mobili */
         }
+
+        .popup-content video {
+            max-width: 100%; /* Imposta la larghezza massima del video al 100% del contenitore genitore */
+            height: auto; /* Imposta l'altezza su auto per mantenere il rapporto di aspetto originale */
+        }
+
 
         .btn-vid {
           width: 100%; /* Imposta la larghezza al 100% per dispositivi mobili */
