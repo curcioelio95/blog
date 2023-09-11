@@ -1109,6 +1109,9 @@ footer .social i:hover{
     text-align: center;
   }
 
+  .ui {
+    box-shadow: inset 2px 2px 55px rgba(53, 144, 255, 0.6) !important;
+  }
 
   .heading{
     text-align: center;
