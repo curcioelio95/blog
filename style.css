@@ -1110,8 +1110,11 @@ footer .social i:hover{
   }
 
   .ui {
-    box-shadow: inset 2px 2px 55px rgba(53, 144, 255, 0.6) !important;
+    scale: 1.2;
+    margin-top: 10%;
+    box-shadow: inset 2px 2px 90px rgba(53, 144, 255, 0.6) !important;
   }
+
 
   .heading{
     text-align: center;
