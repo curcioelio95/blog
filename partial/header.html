@@ -16,19 +16,19 @@
     <li>
       <a class="nav-link" href="#about">About</a>
     </li>
-    <li>
+    <li class="destinations-links">
       <a class="nav-link" href="#world">Destinations</a>
       <ul>
         <li>
-          <a href="#destinations">Italy</a>
+          <a solar-page="partial/destinations.html" solar-selector="#destin">Italy</a>
           <ul>
-            <li><a href="#location" solar-page="pages/cosenza/cosenza.html" solar-selector="main">Cosenza</a></li>
-            <li><a href="#">Firenze</a></li>
-            <li><a href="#">Roma</a></li>
-            <li><a href="#">Venezia</a></li>
-            <li><a href="#">Milano</a></li>
-            <li><a href="#">Torino</a></li>
-            <li><a href="https://www.google.com" target="_blank">Northen Territory</a></li>
+            <li><a solar-page="pages/cosenza/cosenza.html" solar-selector="main">Cosenza</a></li>
+            <li><a>Firenze</a></li>
+            <li><a>Roma</a></li>
+            <li><a>Venezia</a></li>
+            <li><a>Milano</a></li>
+            <li><a>Torino</a></li>
+            <li><a target="_blank">Northen Territory</a></li>
           </ul>
         </li>
         <li>
@@ -124,5 +124,33 @@
   });
 
   /*------X----- SCROLL TOGGLE MENU --------X--------*/
+
+  
+  // document.querySelectorAll('.destinations-links ul li a').forEach(link => {
+  //   link.addEventListener('click', () => {
+  //     console.log(link.innerText);
+  //     setTimeout(() => {
+  //       const y = document.querySelector('#destinations').getBoundingClientRect().y;
+  //       window.scroll({
+  //         top: y,
+  //         behavior: 'smooth'
+  //       });
+  //     }, 1000);
+  //   });
+  // });
+  
+  document.querySelectorAll('.destinations-links ul li ul a').forEach(link => {
+    link.addEventListener('click', () => {
+      console.log(link.innerText);
+      setTimeout(() => {
+        const y = document.querySelector('main').offsetTop;
+        console.warn(y, document.querySelector('main'));
+        window.scroll({
+          top: y,
+          behavior: 'smooth'
+        });
+      }, 1000);
+    });
+  });
 </script>
 

@@ -42,3 +42,12 @@
       color: #FF5733;
     }
   </style>
+
+<script>
+  const y = document.querySelector('#destin').offsetTop;
+  console.log(y);
+  window.scroll({
+    top: y+200,
+    behavior: 'smooth'
+  });
+</script>

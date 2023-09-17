@@ -83,3 +83,12 @@
         padding-top: 10vh;
     }
   </style>
+
+  <script>
+      const y = document.querySelector('#destin').offsetTop;
+      window.scroll({
+        top: y,
+        behavior: 'smooth'
+      });
+      document.querySelector('#location').innerHTML = '';
+  </script>
