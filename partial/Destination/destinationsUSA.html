@@ -1,0 +1,51 @@
+ <!-- Destinations -->
+ <section class="destinations" id="destinations">
+    <div class="contentBx">
+      <h2 class="heading">Destinations</h2>
+      <p class="text">Welcome to a virtual bulletin board with a universe of places awaiting discovery. Enjoy the thrill of exploring <strong>new locations!</strong> You'll discover a brief description, intriguing information, useful hints, and a <strong>map</strong> indicating some of the most gorgeous places to visit while on your tour for each location. If you enjoy photography, there is also a handpicked <strong>collection of photographs</strong> at the conclusion!</p>
+    </div>
+    <div class="wrapper">
+          <div class="card" solar-page="pages/cosenza/cosenza.html" solar-selector="main" href="#location">
+            <img src ="images/NewYork/icon.jpg" alt="Avatar">
+                <div class="content-2">
+                  <h1 solar-page="pages/cosenza/cosenza.html" solar-selector="main" href="#location">New York</h1>
+                  <h3>New York, U.S.A.</h3>
+                  <!-- <p>I miss that life :(</p> -->
+                  <!-- <div class="button"><span>Read more</span></div> -->
+                </div>
+          </div>
+          <div class="card" solar-page="partial/allestimento.html" solar-selector="main" href="#location">
+            <img src ="images/Chicago/icon.jpg" alt="Avatar">
+            <div class="content-2">
+              <h1>Chicago</h1>
+              <h3>Illinoy, U.S.A.</h3>
+              <!-- <p>I miss that life :(</p> -->
+                <!-- <a class="button" href="imgPortFolio.html" target="_blank"><span>Read more</span></a> -->
+            </div>
+          </div>
+          <div class="card" solar-page="partial/allestimento.html" solar-selector="main" href="#location">
+            <img src ="images/IowaCity/icon.jpg" alt="Avatar">
+            <div class="content-2">
+              <h1>Iowa City</h1>
+              <h3>Iowa, U.S.A.</h3>
+              <!-- <p>I miss that life :(</p> -->
+              <!-- <div class="button"><span>Read more</span></div> -->
+            </div>
+          </div>          
+      </div>
+  </section>
+
+  <style>
+    .destinations{
+        padding-top: 10vh;
+    }
+  </style>
+
+  <script>
+      const y = document.querySelector('#destin').offsetTop;
+      window.scroll({
+        top: y,
+        behavior: 'smooth'
+      });
+      document.querySelector('#location').innerHTML = '';
+  </script>
