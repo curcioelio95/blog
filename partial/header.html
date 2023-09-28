@@ -20,32 +20,32 @@
       <a class="nav-link" href="#world">Destinations</a>
       <ul>
         <li>
-          <a solar-page="partial/Destination/destinationsItaly.html" solar-selector="#destin">Italy</a>
+          <a class="place-link" solar-page="partial/Destination/destinationsItaly.html" solar-selector="#destin">Italy</a>
           <ul>
-            <li><a solar-page="pages/cosenza/cosenza.html" solar-selector="main">Cosenza</a></li>
-            <li><a>Venice</a></li>
-            <li><a>San Marino</a></li>
-            <li><a>Naples</a></li>
-            <li><a>Ortigia</a></li>
-            <li><a>Florence</a></li>
+            <li><a class="place-link" solar-page="pages/cosenza/cosenza.html" solar-selector="main">Cosenza</a></li>
+            <li><a class="place-link">Venice</a></li>
+            <li><a class="place-link">San Marino</a></li>
+            <li><a class="place-link">Naples</a></li>
+            <li><a class="place-link">Ortigia</a></li>
+            <li><a class="place-link">Florence</a></li>
             <!-- <li><a target="_blank">Northen Territory</a></li> -->
           </ul>
         </li>
         <li>
-          <a solar-page="partial/Destination/destinationsEurope.html" solar-selector="#destin">Europe</a>
+          <a class="place-link" solar-page="partial/Destination/destinationsEurope.html" solar-selector="#destin">Europe</a>
           <ul>
-            <li><a href="#">Barcelona</a></li>
-            <li><a href="#">Madrid</a></li>
-            <li><a href="#">London</a></li>
-            <li><a href="#">Parice</a></li>
+            <li><a class="place-link" href="#">Barcelona</a></li>
+            <li><a class="place-link" href="#">Madrid</a></li>
+            <li><a class="place-link" href="#">London</a></li>
+            <li><a class="place-link" href="#">Parice</a></li>
           </ul>
         </li>
         <li>
-          <a solar-page="partial/Destination/destinationsUSA.html" solar-selector="#destin">U.S.A.</a>
+          <a class="place-link" solar-page="partial/Destination/destinationsUSA.html" solar-selector="#destin">U.S.A.</a>
           <ul>
-            <li><a href="#">New York</a></li>
-            <li><a href="#">Chicago</a></li>
-            <li><a href="#">Iowa City</a></li>
+            <li><a class="place-link" href="#">New York</a></li>
+            <li><a class="place-link" href="#">Chicago</a></li>
+            <li><a class="place-link" href="#">Iowa City</a></li>
           </ul>
         </li>
       </ul>
@@ -92,6 +92,7 @@
   $icon = $(".fa-bars");
   $banner = $(".banner");
   $navLink = $(".nav-link");
+  $placeLink = $(".place-link");
   $scrollTop = $(".scrollTop");
   $brand = $(".nav-brand");
   $dropdown = $(".dropdown");
@@ -105,6 +106,10 @@
   }).resize();
 
   $icon.click(function(){
+    $nav.toggleClass("collapse");
+  });
+
+  $placeLink.click(function(){
     $nav.toggleClass("collapse");
   });
 
