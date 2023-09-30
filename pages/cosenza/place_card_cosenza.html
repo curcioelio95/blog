@@ -167,7 +167,7 @@
     container: 'map',
     // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
     style: 'mapbox://styles/mapbox/streets-v12',
-    center: [16.250193, 39.309993],
+    center: [16.25704652568126, 39.29397419000367],
     zoom: 12.15
     });
     
@@ -270,7 +270,7 @@
         // place to eat
         [
         {
-                'name':'borgo rosso di sera', 
+                'name':'Borgo rosso di sera', 
                 'coordinates': [16.07182033309263, 39.286312960759034],
                 'color': '#28a745',
                 'properties': {
@@ -279,7 +279,7 @@
                 },
             },    
         {
-                'name':'la gulia', 
+                'name':'La gulia', 
                 'coordinates': [16.25483911682676, 39.29204901646318],
                 'color': '#28a745',
                 'properties': {
@@ -312,6 +312,15 @@
                 'properties': {
                 'description':
                 '<strong>Salumeria Barrese</strong><p>Ottimo posto dove provare prodotti tipici della Sila e concederti un buon panino. <a href="https://www.facebook.com/AnticaSalumeriaBarrese/" target="_blank" title="clicca qui"> website</a></p>'
+                },
+            },
+            {
+                'name':'vecchio ulivo', 
+                'coordinates': [16.263342, 39.263735],
+                'color': '#28a745',
+                'properties': {
+                'description':
+                '<strong>Al Vecchio Ulivo</strong><p>Ottimo posto dove provare prodotti tipici della tradizione. <a href="https://www.facebook.com/people/Al-vecchio-ulivo/100054470499583/" target="_blank" title="clicca qui"> website</a></p>'
                 },
             }
         ],
@@ -431,7 +440,7 @@ function addMarkersToSource(mpSet) {
     });
 
     map.setZoom(9.45);
-    map.setCenter([16.250193, 39.309993]);
+    map.setCenter([16.25704652568126, 39.29397419000367]);
     currentMarkers = mpSet;
     console.log(currentMarkers);
     map.on('load', () => {})
