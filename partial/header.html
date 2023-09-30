@@ -161,5 +161,17 @@
       }, 500);
     });
   });
+
+  document.querySelector('.destinations-links a').addEventListener('click', () => {
+      setTimeout(() => {
+        const y = document.querySelector('#world').offsetTop;
+        console.warn(y, document.querySelector('#world'));
+        window.scroll({
+          top: y-100,
+          behavior: 'smooth'
+        });
+      }, 500);
+    });
+
 </script>
 
