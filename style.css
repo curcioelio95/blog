@@ -395,7 +395,7 @@ nav ul ul ul li{
   top: -50px;
   left: 120px;
   width: 200px;
-  z-index: 1000;
+  z-index: 2;
 }
 
 .nav .social, .nav .users{
