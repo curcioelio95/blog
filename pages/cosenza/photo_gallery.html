@@ -1,6 +1,7 @@
 <div class="sectionTitle">
   <h1>Gallery</h1>
   <p class="text"> A collection of shots and unique moments to discover this fantastic place </p>
+  <button class="btn_gallery">Show Gallery</button>
 </div>
 <div class="gallery">
     <div class="gallery-item">
@@ -194,6 +195,27 @@
       /* Styling for caption */
   }
 
+  .btn_gallery {
+    color:  var(--gunmetal);
+    margin: 1.8em;
+    border: 2px solid  var(--gunmetal);
+    background:  white;
+    border-radius: 2em;
+    padding: 1em 3em;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .btn_gallery:hover {
+    background-color: rgba(51, 60, 70, 0.3);
+  }
+
+  .gallery-item {
+      display: none;
+  }
+
   </style>
 
 
@@ -204,22 +226,38 @@
   const lightboxContent = document.querySelector(".lightbox-content");
   const lightboxCaption = document.querySelector(".caption");
   const closeBtn = document.querySelector(".close");
+  const galleryBtn = document.querySelector(".btn_gallery");
 
-  galleryItems.forEach((item, index) => {
-      item.addEventListener("click", () => {
-          lightbox.style.display = "block";
-          lightboxContent.src = item.querySelector("img").src;
-          lightboxCaption.textContent = item.querySelector(".caption").textContent;
-      });
-  });
 
-  closeBtn.addEventListener("click", () => {
-      lightbox.style.display = "none";
-  });
-
-  lightbox.addEventListener("click", (event) => {
-      if (event.target === lightbox) {
-          lightbox.style.display = "none";
+  galleryBtn.addEventListener("click", function() {
+      // Seleziona tutti gli elementi con la classe "hidden" e li mostra
+      // var immaginiNascoste = document.querySelectorAll(".hidden");
+      for (var i = 0; i < galleryItems.length; i++) {
+          galleryItems[i].style.display = "block";
       }
+      // Nascondi il pulsante dopo aver mostrato le immagini
+      this.style.display = "none";
   });
+  // galleryItems.forEach((item, index) => {
+  //     item.addEventListener("click", () => {
+  //         lightbox.style.display = "block";
+  //         lightboxContent.src = item.querySelector("img").src;
+  //         lightboxCaption.textContent = item.querySelector(".caption").textContent;
+  //     });
+  // });
+
+  // closeBtn.addEventListener("click", () => {
+  //     lightbox.style.display = "none";
+  // });
+
+  // lightbox.addEventListener("click", (event) => {
+  //     if (event.target === lightbox) {
+  //         lightbox.style.display = "none";
+  //     }
+  // });
   </script>
+
+<script>
+  // Funzione per mostrare le immagini quando viene cliccato il pulsante
+ 
+</script>
