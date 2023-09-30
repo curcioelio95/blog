@@ -852,6 +852,19 @@ footer .social i:hover{
   .testimonials .wrapper .contentBx p {
   font-size: 2.2rem;
   }
+
+  #footer__logo{
+    font-family: 'Archivo Black', sans-serif;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    gap: 10px;
+    height: 60px;
+}
+
 }
 
 @media screen and (max-width: 1000px){
