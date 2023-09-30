@@ -111,7 +111,6 @@
 
   $placeLink.click(function(){
     $nav.removeClass("collapse");
-    $placeLink.style.display = "none";
   });
 
   $navLink.click(function(){
@@ -156,7 +155,7 @@
         const y = document.querySelector('main').offsetTop;
         console.warn(y, document.querySelector('main'));
         window.scroll({
-          top: y-100,
+          top: y-60,
           behavior: 'smooth'
         });
       }, 500);
