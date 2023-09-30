@@ -161,7 +161,7 @@
 
 
 <script>
-
+    const img_dim=200;
     mapboxgl.accessToken = 'pk.eyJ1IjoiZWxpb21hdHRlbzk1IiwiYSI6ImNsbHAzbTZjbDAxeGMzbXF6dTF0aTJ6OTEifQ.UbtyyNO3zrxCy9csW01oaA';
     const map = new mapboxgl.Map({
     container: 'map',
@@ -333,7 +333,7 @@
                 'color': '#dc3545',
                 'properties': {
                 'description':
-                '<strong>Castello Svevo</strong><div style="text-align:center"><img width="150" height="150" src="images/cosenza/pic_cs_2.jpg"/></div><p>Vieni a scoprire questo posto <a href="http://www.castellocosenza.it/" target="_blank" title="scopri il castello"> cliccando qui</a>.</p>'
+                '<strong>Castello Svevo</strong><div style="text-align:center"><img width="'+img_dim+'" height="'+img_dim+'" src="images/cosenza/pic_cs_2.jpg"/></div><p>Vieni a scoprire questo posto <a href="http://www.castellocosenza.it/" target="_blank" title="scopri il castello"> cliccando qui</a>.</p>'
                 },
             },
             {
