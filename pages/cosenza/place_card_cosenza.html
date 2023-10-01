@@ -161,7 +161,14 @@
 
 
 <script>
-    const img_dim=200;
+    var img_dim;
+
+    // Verifica la larghezza dello schermo
+    if (window.innerWidth <= 375) { // Larghezza massima di un iPhone
+        img_dim = "150"; // Dimensione per schermi di iPhone
+    } else {
+        img_dim = "250"; // Dimensione per schermi più grandi
+    }
     mapboxgl.accessToken = 'pk.eyJ1IjoiZWxpb21hdHRlbzk1IiwiYSI6ImNsbHAzbTZjbDAxeGMzbXF6dTF0aTJ6OTEifQ.UbtyyNO3zrxCy9csW01oaA';
     const map = new mapboxgl.Map({
     container: 'map',
@@ -342,7 +349,7 @@
                 'color': '#dc3545',
                 'properties': {
                 'description':
-                '<strong>Fiumefreddo Bruzio</strong><div style="text-align:center"><img width="150" height="150" src="images/cosenza/pic_cs_15.png"/></div><p>Vieni a scoprire questo posto <a href="https://borghipiubelliditalia.it/borgo/fiumefreddo-bruzio/" target="_blank" title="scopri il castello"> cliccando qui</a>.</p>'
+                '<strong>Fiumefreddo Bruzio</strong><div style="text-align:center"><img width="'+img_dim+'" height="'+img_dim+'" src="images/cosenza/pic_cs_15.png"/></div><p>Vieni a scoprire questo posto <a href="https://borghipiubelliditalia.it/borgo/fiumefreddo-bruzio/" target="_blank" title="scopri il castello"> cliccando qui</a>.</p>'
                 },
             },
             {
@@ -351,7 +358,7 @@
                 'color': '#dc3545',
                 'properties': {
                 'description':
-                '<strong>Lorica</strong><div style="text-align:center"><img width="150" height="150" src="images/cosenza/pic_cs_11.png"/></div><p>Vieni a scoprire questo posto <a href="https://www.jamaluca.com/lorica-lago-arvo/" target="_blank" title="scopri il castello"> cliccando qui</a>.</p>'
+                '<strong>Lorica</strong><div style="text-align:center"><img width="'+img_dim+'" height="'+img_dim+'" src="images/cosenza/pic_cs_11.png"/></div><p>Vieni a scoprire questo posto <a href="https://www.jamaluca.com/lorica-lago-arvo/" target="_blank" title="scopri il castello"> cliccando qui</a>.</p>'
                 },
             },
             {
@@ -360,7 +367,7 @@
                 'color': '#dc3545',
                 'properties': {
                 'description':
-                '<strong>Cocuzzo Mountain</strong><div style="text-align:center"><img width="150" height="150" src="images/pic2.jpg"/></div><p>Vieni a scoprire questo posto <a href="https://www.calabriaportal.com/montagne-della-calabria/catena-costiera-appennino-paolano/1208-monte-cocuzzo.html" target="_blank" title="scopri il castello"> cliccando qui</a>.</p>'
+                '<strong>Cocuzzo Mountain</strong><div style="text-align:center"><img width="'+img_dim+'" height="'+img_dim+'" src="images/pic2.jpg"/></div><p>Vieni a scoprire questo posto <a href="https://www.calabriaportal.com/montagne-della-calabria/catena-costiera-appennino-paolano/1208-monte-cocuzzo.html" target="_blank" title="scopri il castello"> cliccando qui</a>.</p>'
                 },
             },
             {
@@ -369,7 +376,7 @@
                 'color': '#dc3545',
                 'properties': {
                 'description':
-                '<strong>National Park</strong><div style="text-align:center"><img width="150" height="150" src="images/cosenza/pic_cs_3.jpg"/></div><p>Vieni a scoprire questo posto <a href="https://www.parcosila.it/it/" target="_blank" title="scopri il castello"> cliccando qui</a>.</p>'
+                '<strong>National Park</strong><div style="text-align:center"><img width="'+img_dim+'" height="'+img_dim+'" src="images/cosenza/pic_cs_3.jpg"/></div><p>Vieni a scoprire questo posto <a href="https://www.parcosila.it/it/" target="_blank" title="scopri il castello"> cliccando qui</a>.</p>'
                 },
             },
             {
@@ -378,7 +385,7 @@
                 'color': '#dc3545',
                 'properties': {
                 'description':
-                '<strong>Lavender park</strong><div style="text-align:center"><img width="150" height="150" src="https://th.bing.com/th/id/OIP.aWdHV6VdDbkRQt52XETargHaHa?pid=ImgDet&rs=1"/></div><p>Vieni a scoprire questo posto <a href="https://parcodellalavanda.it/" target="_blank" title="scopri il castello"> cliccando qui</a>.</p>'
+                '<strong>Lavender park</strong><div style="text-align:center"><img width="'+img_dim+'" height="'+img_dim+'" src="https://th.bing.com/th/id/OIP.aWdHV6VdDbkRQt52XETargHaHa?pid=ImgDet&rs=1"/></div><p>Vieni a scoprire questo posto <a href="https://parcodellalavanda.it/" target="_blank" title="scopri il castello"> cliccando qui</a>.</p>'
                 },
             },
             {
@@ -387,7 +394,7 @@
                 'color': '#dc3545',
                 'properties': {
                 'description':
-                '<strong>Arco Magno</strong><div style="text-align:center"><img width="150" height="150" src="https://i.pinimg.com/736x/39/e5/b8/39e5b88c0ace231d77566ce1a32ce1bf.jpg"/></div><p>Vieni a scoprire questo posto <a href="https://iitalycalabria.com/cosenza-province/arco-magno-beach/" target="_blank" title="scopri il castello"> cliccando qui</a>.</p>'
+                '<strong>Arco Magno</strong><div style="text-align:center"><img width="'+img_dim+'" height="'+img_dim+'" src="https://i.pinimg.com/736x/39/e5/b8/39e5b88c0ace231d77566ce1a32ce1bf.jpg"/></div><p>Vieni a scoprire questo posto <a href="https://iitalycalabria.com/cosenza-province/arco-magno-beach/" target="_blank" title="scopri il castello"> cliccando qui</a>.</p>'
                 },
             }
         ],
