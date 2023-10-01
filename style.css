@@ -1163,6 +1163,8 @@ footer .social i:hover{
 
 .social__media--wrap {
     text-align: center; /* Centra il testo del footer su dispositivi mobili */
+    flex-direction: column;
+    
 }
 
 #footer__logo img {

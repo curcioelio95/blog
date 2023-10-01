@@ -11,7 +11,6 @@
                 <button id="style3-button">  <i class="fas fa-camera"></i> Shots</button>
                 <button id="style4-button">  <i class="fas fa-motorcycle"></i> Trip</button>
             </div>
-            
         </div>
     </div>
 </div>
@@ -154,23 +153,20 @@
         color: transparent; /* Rende il testo del link trasparente */
     }
 
-     
-
 </style>
-   
-
 
 <script>
     var img_w;
     var img_h;
     // Verifica la larghezza dello schermo
     if (window.innerWidth <= 900) { // Larghezza massima di un iPhone
-        img_w = "200"; // Dimensione per schermi di iPhone
-        img_w = "168";
+        img_w = 200; // Dimensione per schermi di iPhone
+        img_w = 168;
     } else {
-        img_w = "220"; // Dimensione per schermi più grandi
-        img_h = "185";
+        img_w = 220; // Dimensione per schermi più grandi
+        img_h = 185;
     }
+
     mapboxgl.accessToken = 'pk.eyJ1IjoiZWxpb21hdHRlbzk1IiwiYSI6ImNsbHAzbTZjbDAxeGMzbXF6dTF0aTJ6OTEifQ.UbtyyNO3zrxCy9csW01oaA';
     const map = new mapboxgl.Map({
     container: 'map',
@@ -178,251 +174,249 @@
     style: 'mapbox://styles/mapbox/streets-v12',
     center: [16.25704652568126, 39.29397419000367],
     zoom: 12.4
-    });
-    
+    }); 
 
     const mpSets = [
-        //place to visit
-        [
-            // Array di posizioni per lo Style 1
-            {
-                'name':'loc 1', 
-                'coordinates': [16.250893166752007, 39.29852011896949],
-                'color': '#007bff',
-                'properties': {
-                'description':
-                '<strong>S. Teresa church</strong>'
-                },
-            },
-            {
-                'name':'loc 2', 
-                'coordinates': [16.253082263194415, 39.300183889469935],
-                'color': '#007bff',
-                'properties': {
-                'description':
-                '<strong>Piazza Kennedy</strong>'
-                },
-            },
-            {
-                'name':'loc 3', 
-                'coordinates': [16.25208929691391, 39.30238656181976],
-                'color': '#007bff',
-                'properties': {
-                'description':
-                '<strong>Piazza Fera</strong>'
-                },
-            },
-            {
-                'name':'loc 4', 
-                'coordinates': [16.258147029621743, 39.28637664188248],
-                'color': '#007bff',
-                'properties': {
-                'description':
-                '<strong>Svevo Castle</strong>'
-                },
-            },
-            {
-                'name':'loc 5', 
-                'coordinates': [16.261838123018165, 39.28650811027968],
-                'color': '#007bff',
-                'properties': {
-                'description':
-                '<strong>Rendano theatre</strong>'
-                },
-            },
-            {
-                'name':'loc 6', 
-                'coordinates': [16.26353030925179, 39.28550125431792],
-                'color': '#007bff',
-                'properties': {
-                'description':
-                '<strong>Villa Vecchia</strong>'
-                },
-            },
-            {
-                'name':'loc 7', 
-                'coordinates': [16.263889553498842, 39.289515509781836],
-                'color': '#007bff',
-                'properties': {
-                'description':
-                '<strong>Museum of Bretti and Enotri</strong>'
-                },
-            },
-            {
-                'name':'loc 8', 
-                'coordinates': [16.259926778615238, 39.289063908059234],
-                'color': '#007bff',
-                'properties': {
-                'description':
-                '<strong>Cathedral</strong>'
-                },
-            },
-            {
-                'name':'loc 9', 
-                'coordinates': [16.262057674494827, 39.291792102347216],
-                'color': '#007bff',
-                'properties': {
-                'description':
-                '<strong>Rendano\'s home</strong>'
-                },
-            },
-            {
-                'name':'loc 10', 
-                'coordinates': [16.2618544855724, 39.29068267518687],
-                'color': '#007bff',
-                'properties': {
-                'description':
-                '<strong>National gallery</strong>'
-                },
-            },
-           
-        ],
-        // place to eat
-        [
+    //place to visit
+    [
+        // Array di posizioni per lo Style 1
         {
-                'name':'Borgo rosso di sera', 
-                'coordinates': [16.07182033309263, 39.286312960759034],
-                'color': '#28a745',
-                'properties': {
-                'description':
-                '<strong>Borgo Rosso di Sera</strong><p>Great place to try typical products. <a href="http://www.borgorossodisera.com/" target="_blank" title="clicca qui"> website</a></p>'
-                },
-            },    
+            'name':'loc 1', 
+            'coordinates': [16.250893166752007, 39.29852011896949],
+            'color': '#007bff',
+            'properties': {
+            'description':
+            '<strong>S. Teresa church</strong>'
+            },
+        },
         {
-                'name':'La gulia', 
-                'coordinates': [16.25483911682676, 39.29204901646318],
-                'color': '#28a745',
-                'properties': {
-                'description':
-                '<strong>A gulia</strong><p>Great place to try typical products. <a href="https://www.facebook.com/people/A-Gulia/100054881659522/" target="_blank" title="clicca qui"> website</a></p>'
-                },
+            'name':'loc 2', 
+            'coordinates': [16.253082263194415, 39.300183889469935],
+            'color': '#007bff',
+            'properties': {
+            'description':
+            '<strong>Piazza Kennedy</strong>'
             },
-            {
-                'name':'Il Cugino', 
-                'coordinates': [16.250639023612166, 39.236666401220816],
-                'color': '#28a745',
-                'properties': {
-                'description':
-                '<strong>Osteria dal Cugino</strong><p>Great place to try typical products. <a href="https://www.osteriadalcugino.it/" target="_blank" title="clicca qui"> website</a></p>'
-                },
+        },
+        {
+            'name':'loc 3', 
+            'coordinates': [16.25208929691391, 39.30238656181976],
+            'color': '#007bff',
+            'properties': {
+            'description':
+            '<strong>Piazza Fera</strong>'
             },
-            {
-                'name':'Campanaro', 
-                'coordinates': [16.441248062620843, 39.33831909443026],
-                'color': '#28a745',
-                'properties': {
-                'description':
-                '<strong>Campanaro</strong><p>Great place to try typical Sila\'s products. <a href="https://www.facebook.com/silafunghicampanaro.prodottitipicicalabresi/" target="_blank" title="clicca qui"> website</a></p>'
-                },
+        },
+        {
+            'name':'loc 4', 
+            'coordinates': [16.258147029621743, 39.28637664188248],
+            'color': '#007bff',
+            'properties': {
+            'description':
+            '<strong>Svevo Castle</strong>'
             },
-            {
-                'name':'Barrese', 
-                'coordinates': [16.424183338184548, 39.34082616011915],
-                'color': '#28a745',
-                'properties': {
-                'description':
-                '<strong>Salumeria Barrese</strong><p>Great place to try typical Sila\'s products. <a href="https://www.facebook.com/AnticaSalumeriaBarrese/" target="_blank" title="clicca qui"> website</a></p>'
-                },
+        },
+        {
+            'name':'loc 5', 
+            'coordinates': [16.261838123018165, 39.28650811027968],
+            'color': '#007bff',
+            'properties': {
+            'description':
+            '<strong>Rendano theatre</strong>'
             },
-            {
-                'name':'vecchio ulivo', 
-                'coordinates': [16.263342, 39.263735],
-                'color': '#28a745',
-                'properties': {
-                'description':
-                '<strong>Al Vecchio Ulivo</strong><p>Great place to try typical products. <a href="https://www.facebook.com/people/Al-vecchio-ulivo/100054470499583/" target="_blank" title="clicca qui"> website</a></p>'
-                },
-            }
-        ],
-        //place to shot
-        [
-            {
-                'name':'loc ', 
-                'coordinates': [16.257499655780663,39.28692244554949],
-                'color': '#dc3545',
-                'properties': {
-                'description':
-                '<strong>Castello Svevo</strong><div style="text-align:center"><img width="'+img_w+'" height="'+img_h+'" src="images/cosenza/pic_cs_2.jpg"/></div><p>Come and discover this place <a href="http://www.castellocosenza.it/" target="_blank" title="scopri il castello">here</a>.</p>'
-                },
+        },
+        {
+            'name':'loc 6', 
+            'coordinates': [16.26353030925179, 39.28550125431792],
+            'color': '#007bff',
+            'properties': {
+            'description':
+            '<strong>Villa Vecchia</strong>'
             },
-            {
-                'name':'loc ', 
-                'coordinates': [16.06715574534971,39.234287479396784],
-                'color': '#dc3545',
-                'properties': {
-                'description':
-                '<strong>Fiumefreddo Bruzio</strong><div style="text-align:center"><img width="'+img_w+'" height="'+img_h+'" src="images/cosenza/pic_cs_15.png"/></div><p>Come and discover this place <a href="https://borghipiubelliditalia.it/borgo/fiumefreddo-bruzio/" target="_blank" title="scopri il castello">here</a>.</p>'
-                },
+        },
+        {
+            'name':'loc 7', 
+            'coordinates': [16.263889553498842, 39.289515509781836],
+            'color': '#007bff',
+            'properties': {
+            'description':
+            '<strong>Museum of Bretti and Enotri</strong>'
             },
-            {
-                'name':'loc ', 
-                'coordinates': [16.511167345148863,39.24903420153629],
-                'color': '#dc3545',
-                'properties': {
-                'description':
-                '<strong>Lorica</strong><div style="text-align:center"><img width="'+img_w+'" height="'+img_h+'" src="images/cosenza/pic_cs_11.png"/></div><p>Come and discover this place  <a href="https://www.jamaluca.com/lorica-lago-arvo/" target="_blank" title="scopri il castello">here</a>.</p>'
-                },
+        },
+        {
+            'name':'loc 8', 
+            'coordinates': [16.259926778615238, 39.289063908059234],
+            'color': '#007bff',
+            'properties': {
+            'description':
+            '<strong>Cathedral</strong>'
             },
-            {
-                'name':'loc ', 
-                'coordinates': [16.132401967899085,39.21839237474916],
-                'color': '#dc3545',
-                'properties': {
-                'description':
-                '<strong>Cocuzzo Mountain</strong><div style="text-align:center"><img width="'+img_w+'" height="'+img_h+'" src="images/pic2.jpg"/></div><p>Come and discover this place  <a href="https://www.calabriaportal.com/montagne-della-calabria/catena-costiera-appennino-paolano/1208-monte-cocuzzo.html" target="_blank" title="scopri il castello">here</a>.</p>'
-                },
+        },
+        {
+            'name':'loc 9', 
+            'coordinates': [16.262057674494827, 39.291792102347216],
+            'color': '#007bff',
+            'properties': {
+            'description':
+            '<strong>Rendano\'s home</strong>'
             },
-            {
-                'name':'loc ', 
-                'coordinates': [16.54738136416006,39.38535935755124],
-                'color': '#dc3545',
-                'properties': {
-                'description':
-                '<strong>National Park</strong><div style="text-align:center"><img width="'+img_w+'" height="'+img_h+'" src="images/cosenza/pic_cs_3.jpg"/></div><p>Come and discover this place  <a href="https://www.parcosila.it/it/" target="_blank" title="scopri il castello">here</a>.</p>'
-                },
+        },
+        {
+            'name':'loc 10', 
+            'coordinates': [16.2618544855724, 39.29068267518687],
+            'color': '#007bff',
+            'properties': {
+            'description':
+            '<strong>National gallery</strong>'
             },
-            {
-                'name':'loc ', 
-                'coordinates': [16.069710765194372, 39.85425410373412],
-                'color': '#dc3545',
-                'properties': {
-                'description':
-                '<strong>Lavender park</strong><div style="text-align:center"><img width="'+img_w+'" height="'+img_h+'" src="https://th.bing.com/th/id/OIP.aWdHV6VdDbkRQt52XETargHaHa?pid=ImgDet&rs=1"/></div><p>Come and discover this place <a href="https://parcodellalavanda.it/" target="_blank" title="scopri il castello">here</a>.</p>'
-                },
+        },
+       
+    ],
+    // place to eat
+    [
+    {
+            'name':'Borgo rosso di sera', 
+            'coordinates': [16.07182033309263, 39.286312960759034],
+            'color': '#28a745',
+            'properties': {
+            'description':
+            '<strong>Borgo Rosso di Sera</strong><p>Great place to try typical products. <a href="http://www.borgorossodisera.com/" target="_blank" title="clicca qui" rel="nofollow"> website</a></p>'
             },
-            {
-                'name':'loc ', 
-                'coordinates': [15.792102619838204,39.85488110500802],
-                'color': '#dc3545',
-                'properties': {
-                'description':
-                '<strong>Arco Magno</strong><div style="text-align:center"><img width="'+img_w+'" height="'+img_h+'" src="https://i.pinimg.com/736x/39/e5/b8/39e5b88c0ace231d77566ce1a32ce1bf.jpg"/></div><p>Come and discover this place <a href="https://iitalycalabria.com/cosenza-province/arco-magno-beach/" target="_blank" title="scopri il castello">here</a>.</p>'
-                },
-            }
-        ],
-        //place to go
-        [
-            {
-                'name':'Camigliatllo', 
-                'coordinates': [16.44396137834741, 39.339140069521505],
-                'color': '#FFA500',
-                'properties': {
-                'description':
-                '<strong>Camigliatello Silano</strong><div style="text-align:center"></div><p>Ride here.</p>'
-                 },
+        },    
+    {
+            'name':'La gulia', 
+            'coordinates': [16.25483911682676, 39.29204901646318],
+            'color': '#28a745',
+            'properties': {
+            'description':
+            '<strong>A gulia</strong><p>Great place to try typical products. <a href="https://www.facebook.com/people/A-Gulia/100054881659522/" target="_blank" title="clicca qui" rel="nofollow"> website</a></p>'
             },
-            {
-                'name':'Amantea', 
-                'coordinates': [16.07605117497829, 39.133969576929445],
-                'color': '#FFA500',
-                'properties': {
-                'description':
-                '<strong>Amantea</strong><div style="text-align:center"></div><p>Ride here.</p>'
-                },
-            }
-        ]
-    ];
- 
+        },
+        {
+            'name':'Il Cugino', 
+            'coordinates': [16.250639023612166, 39.236666401220816],
+            'color': '#28a745',
+            'properties': {
+            'description':
+            '<strong>Osteria dal Cugino</strong><p>Great place to try typical products. <a href="https://www.osteriadalcugino.it/" target="_blank" title="clicca qui" rel="nofollow"> website</a></p>'
+            },
+        },
+        {
+            'name':'Campanaro', 
+            'coordinates': [16.441248062620843, 39.33831909443026],
+            'color': '#28a745',
+            'properties': {
+            'description':
+            '<strong>Campanaro</strong><p>Great place to try typical Sila\'s products. <a href="https://www.facebook.com/silafunghicampanaro.prodottitipicicalabresi/" target="_blank" title="clicca qui" rel="nofollow"> website</a></p>'
+            },
+        },
+        {
+            'name':'Barrese', 
+            'coordinates': [16.424183338184548, 39.34082616011915],
+            'color': '#28a745',
+            'properties': {
+            'description':
+            '<strong>Salumeria Barrese</strong><p>Great place to try typical Sila\'s products. <a href="https://www.facebook.com/AnticaSalumeriaBarrese/" target="_blank" title="clicca qui" rel="nofollow"> website</a></p>'
+            },
+        },
+        {
+            'name':'vecchio ulivo', 
+            'coordinates': [16.263342, 39.263735],
+            'color': '#28a745',
+            'properties': {
+            'description':
+            '<strong>Al Vecchio Ulivo</strong><p>Great place to try typical products. <a href="https://www.facebook.com/people/Al-vecchio-ulivo/100054470499583/" target="_blank" title="clicca qui"> website</a></p>'
+            },
+        }
+    ],
+    //place to shot
+    [
+        {
+            'name':'loc ', 
+            'coordinates': [16.257499655780663,39.28692244554949],
+            'color': '#dc3545',
+            'properties': {
+            'description':
+            '<strong>Castello Svevo</strong><div style="text-align:center"><img width="'+img_w+'" height="'+img_h+'" src="images/cosenza/pic_cs_2.jpg"/></div><p>Come and discover this place <a href="http://www.castellocosenza.it/" target="_blank" title="scopri il castello" rel="nofollow">here</a>.</p>'
+            },
+        },
+        {
+            'name':'loc ', 
+            'coordinates': [16.06715574534971,39.234287479396784],
+            'color': '#dc3545',
+            'properties': {
+            'description':
+            '<strong>Fiumefreddo Bruzio</strong><div style="text-align:center"><img width="'+img_w+'" height="'+img_h+'" src="images/cosenza/pic_cs_15.png"/></div><p>Come and discover this place <a href="https://borghipiubelliditalia.it/borgo/fiumefreddo-bruzio/" target="_blank" title="scopri il castello" rel="nofollow">here</a>.</p>'
+            },
+        },
+        {
+            'name':'loc ', 
+            'coordinates': [16.511167345148863,39.24903420153629],
+            'color': '#dc3545',
+            'properties': {
+            'description':
+            '<strong>Lorica</strong><div style="text-align:center"><img width="'+img_w+'" height="'+img_h+'" src="images/cosenza/pic_cs_11.png"/></div><p>Come and discover this place  <a href="https://www.jamaluca.com/lorica-lago-arvo/" target="_blank" title="scopri il castello" rel="nofollow">here</a>.</p>'
+            },
+        },
+        {
+            'name':'loc ', 
+            'coordinates': [16.132401967899085,39.21839237474916],
+            'color': '#dc3545',
+            'properties': {
+            'description':
+            '<strong>Cocuzzo Mountain</strong><div style="text-align:center"><img width="'+img_w+'" height="'+img_h+'" src="images/pic2.jpg"/></div><p>Come and discover this place  <a href="https://www.calabriaportal.com/montagne-della-calabria/catena-costiera-appennino-paolano/1208-monte-cocuzzo.html" target="_blank" title="scopri il castello" rel="nofollow">here</a>.</p>'
+            },
+        },
+        {
+            'name':'loc ', 
+            'coordinates': [16.54738136416006,39.38535935755124],
+            'color': '#dc3545',
+            'properties': {
+            'description':
+            '<strong>National Park</strong><div style="text-align:center"><img width="'+img_w+'" height="'+img_h+'" src="images/cosenza/pic_cs_3.jpg"/></div><p>Come and discover this place  <a href="https://www.parcosila.it/it/" target="_blank" title="scopri il castello" rel="nofollow">here</a>.</p>'
+            },
+        },
+        {
+            'name':'loc ', 
+            'coordinates': [16.069710765194372, 39.85425410373412],
+            'color': '#dc3545',
+            'properties': {
+            'description':
+            '<strong>Lavender park</strong><div style="text-align:center"><img width="'+img_w+'" height="'+img_h+'" src="https://th.bing.com/th/id/OIP.aWdHV6VdDbkRQt52XETargHaHa?pid=ImgDet&rs=1"/></div><p>Come and discover this place <a href="https://parcodellalavanda.it/" target="_blank" title="scopri il castello" rel="nofollow">here</a>.</p>'
+            },
+        },
+        {
+            'name':'loc ', 
+            'coordinates': [15.792102619838204,39.85488110500802],
+            'color': '#dc3545',
+            'properties': {
+            'description':
+            '<strong>Arco Magno</strong><div style="text-align:center"><img width="'+img_w+'" height="'+img_h+'" src="https://i.pinimg.com/736x/39/e5/b8/39e5b88c0ace231d77566ce1a32ce1bf.jpg"/></div><p>Come and discover this place <a href="https://iitalycalabria.com/cosenza-province/arco-magno-beach/" target="_blank" title="scopri il castello" rel="nofollow">here</a>.</p>'
+            },
+        }
+    ],
+    //place to go
+    [
+        {
+            'name':'Camigliatllo', 
+            'coordinates': [16.44396137834741, 39.339140069521505],
+            'color': '#FFA500',
+            'properties': {
+            'description':
+            '<strong>Camigliatello Silano</strong><div style="text-align:center"></div><p>Ride here.</p>'
+             },
+        },
+        {
+            'name':'Amantea', 
+            'coordinates': [16.07605117497829, 39.133969576929445],
+            'color': '#FFA500',
+            'properties': {
+            'description':
+            '<strong>Amantea</strong><div style="text-align:center"></div><p>Ride here.</p>'
+            },
+        }
+    ]
+];
     
 let currentMarkers = [];
 
