@@ -497,6 +497,19 @@ function addMarkersToSource(mpSet) {
     currentMarkers = mpSet;
     console.log(currentMarkers);
     map.on('load', () => {})
+
+    map.on('click', 'markers', (e) => {
+    console.log(e);
+    });
+
+    map.on('mouseenter', 'markers', () => {
+    map.getCanvas().style.cursor = 'pointer';
+    });
+    
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'markers', () => {
+    map.getCanvas().style.cursor = '';
+    });
 }
     
 
@@ -518,7 +531,5 @@ document.getElementById('style4-button').addEventListener('click', () => {
     
 addMarkersToSource(mpSets[0]) ;
 
-map.on('click', 'markers', (e) => {
-    console.log(e);
-});
+
 </script>
