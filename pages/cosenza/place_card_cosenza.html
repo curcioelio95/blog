@@ -403,7 +403,7 @@
             'color': '#FFA500',
             'properties': {
             'description':
-            '<strong>Camigliatello Silano</strong><div style="text-align:center"></div><div><a solar-page="pages/cosenza/header_card_cosenza.html" solar-selector="#c1" style="cursor: pointer;"> Ride here </a></div>',
+            '<strong>Camigliatello Silano</strong><div style="text-align:center"></div><div><a id="try" style="cursor: pointer;"> Ride here </a></div>',
             
              },
         },
@@ -518,5 +518,9 @@ document.getElementById('style4-button').addEventListener('click', () => {
     
 addMarkersToSource(mpSets[0]) 
 
-map.on('click', 'markers', (e) => console.log(e));
+document.querySelectorAll('#try').forEach(link => {
+    link.addEventListener('click', () => {
+        console.log(link);
+    });
+});
 </script>
