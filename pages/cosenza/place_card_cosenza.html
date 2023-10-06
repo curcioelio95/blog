@@ -506,8 +506,19 @@ function addMarkersToSource(mpSet) {
     map.on('load', () => {});
 }
     
-map.on('click', (e) => {
-    console.log(e);
+map.on('click', function (e) {
+    var features = map.queryRenderedFeatures(e.point, {
+        layers: ['markers'] // Specifica il nome del tuo layer
+    });
+
+    if (features.length > 0) {
+        var feature = features[0]; // Prendi la prima feature trovata
+        var markerId = feature.properties.id; // Sostituisci "id" con il nome della tua proprietà
+        alert('Hai cliccato sul marker con ID: ' + markerId);
+    } else {
+        // Il clic non è avvenuto su un marker
+        alert('Clic non su un marker.');
+    }
 });
 
 document.getElementById('style1-button').addEventListener('click', () => {
