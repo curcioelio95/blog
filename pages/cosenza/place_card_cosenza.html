@@ -458,6 +458,7 @@ function addMarkersToSource(mpSet) {
         const marker = new mapboxgl.Marker({
             color
         })
+            .setName("a")
             .setLngLat(coordinates)
             .setPopup(popup)
             .addTo(map);
@@ -509,7 +510,7 @@ function addMarkersToSource(mpSet) {
 
     document.querySelectorAll('.mapboxgl-marker').forEach((markerElement) => {
     markerElement.addEventListener('click', () => {
-        console.log('ok');
+        console.log(name);
     });
 })
 }
