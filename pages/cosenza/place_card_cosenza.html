@@ -516,14 +516,10 @@ document.getElementById('style4-button').addEventListener('click', () => {
     addMarkersToSource(mpSets[3]);
 });
     
-addMarkersToSource(mpSets[0]) 
+addMarkersToSource(mpSets[0]) ;
 
-$(document).on('click', '.mapboxgl-marker', function() {
-  console.log("hello");
-});
-document.querySelectorAll('#try').forEach(link => {
-    link.addEventListener('click', () => {
-        console.log(link);
-    });
+map.on('click', function (e) {
+    console.log("click on map");
+    console.log(e);
 });
 </script>
