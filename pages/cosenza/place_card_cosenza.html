@@ -491,13 +491,7 @@ function addMarkersToSource(mpSet) {
             // Imposta il layout del tuo layer
         }
     });
-
-    map.setZoom(8.45);
-    map.setCenter([16.25704652568126, 39.29397419000367]);
-    currentMarkers = mpSet;
-    console.log(currentMarkers);
-    map.on('load', () => {
-        map.on('click', sourceId, (e) => {
+    map.on('click', sourceId, (e) => {
         console.log(e);
         });
 
@@ -509,7 +503,12 @@ function addMarkersToSource(mpSet) {
         map.on('mouseleave', sourceId, () => {
         map.getCanvas().style.cursor = '';
         });
-    });
+
+    map.setZoom(8.45);
+    map.setCenter([16.25704652568126, 39.29397419000367]);
+    currentMarkers = mpSet;
+    console.log(currentMarkers);
+    map.on('load', () => {});
 }
     
 
