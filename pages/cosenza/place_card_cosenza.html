@@ -518,5 +518,5 @@ document.getElementById('style4-button').addEventListener('click', () => {
     
 addMarkersToSource(mpSets[0]) 
 
-marker.getElement().addEventListener('click', (e) => console.log(e));
+map.on('click', 'places', (e) => console.log(e));
 </script>
