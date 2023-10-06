@@ -446,35 +446,35 @@ function clearMarkers() {
 function addMarkersToSource(mpSet) {
     clearMarkers();
     
-    const sourceId = 'markers';
-    const features = mpSet.map((e) => {
-        const coordinates = e.coordinates.slice();
-        const description = e.properties.description;
-        const color = e.color;
+    // const sourceId = 'markers';
+    // const features = mpSet.map((e) => {
+    //     const coordinates = e.coordinates.slice();
+    //     const description = e.properties.description;
+    //     const color = e.color;
 
-        const popup = new mapboxgl.Popup({ closeOnClick: true })
-            .setHTML(description);
+    //     const popup = new mapboxgl.Popup({ closeOnClick: true })
+    //         .setHTML(description);
 
-        const marker = new mapboxgl.Marker({
-            color
-        })
-            .setLngLat(coordinates)
-            .setPopup(popup)
-            .addTo(map);
+    //     const marker = new mapboxgl.Marker({
+    //         color
+    //     })
+    //         .setLngLat(coordinates)
+    //         .setPopup(popup)
+    //         .addTo(map);
 
-        return {
-            type: 'Feature',
-            geometry: {
-                type: 'Point',
-                coordinates: coordinates
-            },
-            properties: {
-                title: e.name,
-                description: e.properties.description,
-                color: e.color
-            }
-        };
-    });
+    //     return {
+    //         type: 'Feature',
+    //         geometry: {
+    //             type: 'Point',
+    //             coordinates: coordinates
+    //         },
+    //         properties: {
+    //             title: e.name,
+    //             description: e.properties.description,
+    //             color: e.color
+    //         }
+    //     };
+    // });
 
     // map.addSource(sourceId, {
     //     type: 'geojson',
@@ -501,7 +501,36 @@ function addMarkersToSource(mpSet) {
     currentMarkers = mpSet;
     console.log(currentMarkers);
     
-    map.on('load', () => {});
+    map.on('load', () => {
+        map.addSource('markers', {
+        type: 'geojson',
+        data: {
+            type: 'FeatureCollection',
+            features: markerData.map(function (marker) {
+                return {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [marker.longitude, marker.latitude]
+                    },
+                    properties: {
+                        id: marker.id
+                    }
+                };
+            })
+        }
+    });
+
+    map.addLayer({
+        id: 'markers',
+        type: 'circle',
+        source: 'markers',
+        paint: {
+            'circle-radius': 6,
+            'circle-color': 'blue'
+        }
+    });
+    });
 
     map.on('click', map.getLayer('markers'), function(e) {
         console.log('ok2');
