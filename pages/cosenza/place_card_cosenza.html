@@ -501,9 +501,17 @@ function addMarkersToSource(mpSet) {
     currentMarkers = mpSet;
     console.log(currentMarkers);
     
-    
-
     map.on('load', () => {});
+
+    map.on('click', map.getLayer('markers'), function(e) {
+        console.log('ok2');
+    });
+
+    document.querySelectorAll('.mapboxgl-marker').forEach((markerElement) => {
+    markerElement.addEventListener('click', () => {
+        console.log('ok');
+    });
+})
 }
     
 // map.on('click', function (e) {
@@ -520,11 +528,7 @@ function addMarkersToSource(mpSet) {
 //         alert('Clic non su un marker.');
 //     }
 // });
-document.querySelectorAll('.mapboxgl-marker').forEach((markerElement) => {
-    markerElement.addEventListener('click', () => {
-        console.log('ok');
-    });
-})
+
 
 
 document.getElementById('style1-button').addEventListener('click', () => {
