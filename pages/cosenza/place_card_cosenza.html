@@ -497,16 +497,16 @@ function addMarkersToSource(mpSet) {
     currentMarkers = mpSet;
     console.log(currentMarkers);
     map.on('load', () => {
-        map.on('click', 'markers', (e) => {
+        map.on('click', sourceId, (e) => {
         console.log(e);
         });
 
-        map.on('mouseenter', 'markers', () => {
+        map.on('mouseenter', sourceId, () => {
         map.getCanvas().style.cursor = 'pointer';
         });
         
         // Change it back to a pointer when it leaves.
-        map.on('mouseleave', 'markers', () => {
+        map.on('mouseleave', sourceId, () => {
         map.getCanvas().style.cursor = '';
         });
     });
