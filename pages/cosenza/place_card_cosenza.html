@@ -509,7 +509,7 @@ function addMarkersToSource(mpSet) {
 
     document.querySelectorAll('.mapboxgl-marker').forEach((markerElement) => {
     markerElement.addEventListener('click', () => {
-        console.log(markerElement.name);
+        console.log(markerElement.attributes);
     });
 })
 }
