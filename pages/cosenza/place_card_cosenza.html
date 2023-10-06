@@ -521,8 +521,10 @@ function addMarkersToSource(mpSet) {
 //     }
 // });
 document.querySelectorAll('.mapboxgl-marker').forEach((markerElement) => {
+    markerElement.addEventListener('click', () => {
         console.log('ok');
     });
+})
 
 
 document.getElementById('style1-button').addEventListener('click', () => {
