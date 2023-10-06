@@ -484,14 +484,14 @@ function addMarkersToSource(mpSet) {
         }
     });
 
-    map.addLayer({
-        id: 'markers',
-        type: 'symbol',
-        source: sourceId,
-        layout: {
-            // Imposta il layout del tuo layer
-        }
-    });
+    // map.addLayer({
+    //     id: 'markers',
+    //     type: 'symbol',
+    //     source: sourceId,
+    //     layout: {
+    //         // Imposta il layout del tuo layer
+    //     }
+    // });
     map.on('click','markers', (e) => {
         console.log(e);
     });
