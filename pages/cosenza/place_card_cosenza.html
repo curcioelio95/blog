@@ -491,23 +491,30 @@ function addMarkersToSource(mpSet) {
             // Imposta il layout del tuo layer
         }
     });
-    map.on('click', currentMarkers, (e) => {
-        console.log(e);
-        });
-
-        map.on('mouseenter', currentMarkers, () => {
-        map.getCanvas().style.cursor = 'pointer';
-        });
-        
-        // Change it back to a pointer when it leaves.
-        map.on('mouseleave', currentMarkers, () => {
-        map.getCanvas().style.cursor = '';
-        });
+    
 
     map.setZoom(8.45);
     map.setCenter([16.25704652568126, 39.29397419000367]);
     currentMarkers = mpSet;
     console.log(currentMarkers);
+    currentMarkers.forEach(link => {
+    link.addEventListener('click', () => {
+        console.log('hello')
+    })
+    })
+    map.on('click', currentMarkers, (e) => {
+    console.log(e);
+    });
+
+    map.on('mouseenter', currentMarkers, () => {
+    map.getCanvas().style.cursor = 'pointer';
+    });
+    
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', currentMarkers, () => {
+    map.getCanvas().style.cursor = '';
+    });
+
     map.on('load', () => {});
 }
     
