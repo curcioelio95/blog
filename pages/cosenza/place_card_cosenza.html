@@ -176,6 +176,10 @@
     zoom: 12.4
     }); 
 
+    map.on('click', (e) => {
+    console.log(e);
+    });
+
     const mpSets = [
     //place to visit
     [
@@ -498,9 +502,7 @@ function addMarkersToSource(mpSet) {
     currentMarkers = mpSet;
     console.log(currentMarkers);
     
-    map.on('click', (e) => {
-    console.log(e);
-    });
+    
 
     map.on('load', () => {});
 }
