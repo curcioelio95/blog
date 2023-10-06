@@ -491,16 +491,16 @@ function addMarkersToSource(mpSet) {
             // Imposta il layout del tuo layer
         }
     });
-    map.on('click', sourceId, (e) => {
+    map.on('click', currentMarkers, (e) => {
         console.log(e);
         });
 
-        map.on('mouseenter', sourceId, () => {
+        map.on('mouseenter', currentMarkers, () => {
         map.getCanvas().style.cursor = 'pointer';
         });
         
         // Change it back to a pointer when it leaves.
-        map.on('mouseleave', sourceId, () => {
+        map.on('mouseleave', currentMarkers, () => {
         map.getCanvas().style.cursor = '';
         });
 
