@@ -496,19 +496,19 @@ function addMarkersToSource(mpSet) {
     map.setCenter([16.25704652568126, 39.29397419000367]);
     currentMarkers = mpSet;
     console.log(currentMarkers);
-    map.on('load', () => {})
+    map.on('load', () => {
+        map.on('click', 'markers', (e) => {
+        console.log(e);
+        });
 
-    map.on('click', 'markers', (e) => {
-    console.log(e);
-    });
-
-    map.on('mouseenter', 'markers', () => {
-    map.getCanvas().style.cursor = 'pointer';
-    });
-    
-    // Change it back to a pointer when it leaves.
-    map.on('mouseleave', 'markers', () => {
-    map.getCanvas().style.cursor = '';
+        map.on('mouseenter', 'markers', () => {
+        map.getCanvas().style.cursor = 'pointer';
+        });
+        
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'markers', () => {
+        map.getCanvas().style.cursor = '';
+        });
     });
 }
     
