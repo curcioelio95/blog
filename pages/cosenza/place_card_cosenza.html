@@ -403,7 +403,8 @@
             'color': '#FFA500',
             'properties': {
             'description':
-            '<strong>Camigliatello Silano</strong><div style="text-align:center"></div><p>Ride here.</p>'
+            '<strong>Camigliatello Silano</strong><div style="text-align:center"></div><p>Ride here.</p>',
+            'action':'"pages/cosenza/header_card_cosenza.html"'
              },
         },
         {
@@ -417,7 +418,8 @@
         }
     ]
 ];
-    
+   
+
 let currentMarkers = [];
 
 function clearMarkers() {
@@ -515,5 +517,18 @@ document.getElementById('style4-button').addEventListener('click', () => {
 });
     
 addMarkersToSource(mpSets[0]) 
+
+marker.getElement().addEventListener('click', function () {
+        // Esegui il comando specifico per questo marker
+        var solarPage = markerInfo.action;
+        var solarSelector = '#c1';
+        // Esegui il comando solar-page e solar-selector
+        var element = document.querySelector(solarSelector);
+        if (element) {
+            element.setAttribute('solar-page', solarPage);
+        } else {
+            alert('Elemento non trovato con il selettore: ' + solarSelector);
+        }
+})
     
 </script>
