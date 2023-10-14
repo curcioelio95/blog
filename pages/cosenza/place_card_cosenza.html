@@ -473,8 +473,7 @@ function addMarkersToSource(mpSet) {
             .setHTML(description);
 
         const marker = new mapboxgl.Marker({
-            element: customMarkerElement
-            // color
+            color
         })
             .setLngLat(coordinates)
             .setPopup(popup)
