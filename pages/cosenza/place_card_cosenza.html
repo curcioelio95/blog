@@ -449,15 +449,7 @@ function addMarkersToSource(mpSet) {
     const sourceId = 'markers';
     const features = mpSet.map((e) => {
         const name_marker=e.name;
-        const customMarkerElement = document.createElement('div');
-        customMarkerElement.className = 'custom-marker';
-        customMarkerElement.setAttribute('data-marker-id',name_marker); // Aggiungi l'attributo data-marker-id
-
-        customMarkerElement.addEventListener('click', () => {
-            const markerId = customMarkerElement.getAttribute('data-marker-id');
-            console.log(`Selected marker ID: ${markerId}`);
-            // Puoi fare qualcosa con l'ID del marcatore, ad esempio mostrare dettagli o effettuare un'azione specifica.
-        });
+       
 
         const coordinates = e.coordinates.slice();
         const description = e.properties.description;
@@ -473,6 +465,11 @@ function addMarkersToSource(mpSet) {
             .setLngLat(coordinates)
             .setPopup(popup)
             .addTo(map);
+
+        marker.getElement().addEventListener('click', () => {
+            console.log(name_marker);
+        });
+
 
         return {
             type: 'Feature',
