@@ -468,6 +468,7 @@ function addMarkersToSource(mpSet) {
 
         marker.getElement().addEventListener('click', () => {
             console.log(name_marker);
+           
         });
 
 
@@ -503,9 +504,9 @@ function addMarkersToSource(mpSet) {
             // Imposta il layout del tuo layer
         }
     });
-    map.on('click','markers', (e) => {
-        console.log(e);
-    });
+    // map.on('click','markers', (e) => {
+    //     console.log(e);
+    // });
 
     map.setZoom(8.45);
     map.setCenter([16.25704652568126, 39.29397419000367]);
@@ -516,15 +517,15 @@ function addMarkersToSource(mpSet) {
         
     });
 
-    map.on('click', map.getLayer('markers'), function(e) {
-        console.log('ok2');
-    });
+//     map.on('click', map.getLayer('markers'), function(e) {
+//         console.log('ok2');
+//     });
 
-    document.querySelectorAll('.mapboxgl-marker').forEach((markerElement) => {
-    markerElement.addEventListener('click', () => {
-        console.log(markerElement.getElement());
-    });
-})
+//     document.querySelectorAll('.mapboxgl-marker').forEach((markerElement) => {
+//     markerElement.addEventListener('click', () => {
+//         console.log(markerElement.getElement());
+//     });
+// })
 }
     
 // map.on('click', function (e) {
