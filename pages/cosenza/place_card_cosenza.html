@@ -453,22 +453,6 @@ function addMarkersToSource(mpSet) {
         const description = e.properties.description;
         const color = e.color;
 
-        const customMarkerElement = document.createElement('div');
-        customMarkerElement.className = 'custom-marker';
-
-        // Crea un oggetto con attributi personalizzati
-        const markerAttributes = {
-            marker_name: name_marker,
-            description_: 'This is a custom marker with extra attributes',
-            someOtherAttribute: 'Value'
-        };
-
-        // Assegna gli attributi personalizzati come attributo data-* sull'elemento del marcatore
-        for (const key in markerAttributes) {
-            customMarkerElement.setAttribute(`data-${key}`, markerAttributes[key]);
-        }
-
-
         const popup = new mapboxgl.Popup({ closeOnClick: true })
             .setHTML(description);
 
@@ -492,6 +476,16 @@ function addMarkersToSource(mpSet) {
                 color: e.color
             }
         };
+
+        const customMarkerElement = document.createElement('div');
+        customMarkerElement.className = 'custom-marker';
+        customMarkerElement.setAttribute('data-marker-id',name_marker); // Aggiungi l'attributo data-marker-id
+
+        customMarkerElement.addEventListener('click', () => {
+            const markerId = customMarkerElement.getAttribute('data-marker-id');
+            console.log(`Selected marker ID: ${markerId}`);
+            // Puoi fare qualcosa con l'ID del marcatore, ad esempio mostrare dettagli o effettuare un'azione specifica.
+        });
     });
 
     map.addSource(sourceId, {
