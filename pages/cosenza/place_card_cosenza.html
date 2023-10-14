@@ -448,6 +448,7 @@ function addMarkersToSource(mpSet) {
     
     const sourceId = 'markers';
     const features = mpSet.map((e) => {
+        const name=e.name;
         const coordinates = e.coordinates.slice();
         const description = e.properties.description;
         const color = e.color;
@@ -456,6 +457,7 @@ function addMarkersToSource(mpSet) {
             .setHTML(description);
 
         const marker = new mapboxgl.Marker({
+            element: name,
             color
         })
             .setLngLat(coordinates)
