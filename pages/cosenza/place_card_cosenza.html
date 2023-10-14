@@ -448,16 +448,32 @@ function addMarkersToSource(mpSet) {
     
     const sourceId = 'markers';
     const features = mpSet.map((e) => {
-        const name=e.name;
+        const name_marker=e.name;
         const coordinates = e.coordinates.slice();
         const description = e.properties.description;
         const color = e.color;
+
+        const customMarkerElement = document.createElement('div');
+        customMarkerElement.className = 'custom-marker';
+
+        // Crea un oggetto con attributi personalizzati
+        const markerAttributes = {
+            marker_name: name_marker,
+            description_: 'This is a custom marker with extra attributes',
+            someOtherAttribute: 'Value'
+        };
+
+        // Assegna gli attributi personalizzati come attributo data-* sull'elemento del marcatore
+        for (const key in markerAttributes) {
+            customMarkerElement.setAttribute(`data-${key}`, markerAttributes[key]);
+        }
+
 
         const popup = new mapboxgl.Popup({ closeOnClick: true })
             .setHTML(description);
 
         const marker = new mapboxgl.Marker({
-            element: name,
+            element: customMarkerElement,
             color
         })
             .setLngLat(coordinates)
