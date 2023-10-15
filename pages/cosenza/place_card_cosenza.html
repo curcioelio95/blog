@@ -469,7 +469,15 @@ function addMarkersToSource(mpSet) {
         marker.getElement().addEventListener('click', () => {
             console.log(name_marker);
             if (name_marker === "Amantea") {
-                document.querySelector('#c1').style.display = "block";
+                const page=document.querySelector('#c1');
+                page.style.display = "block";
+
+                 // Modifica il testo all'interno della sezione
+                page.querySelector('.content-title').textContent = 'Nuovo titolo';
+                page.querySelector('.content-subtitle').textContent = 'Nuovo sottotitolo';
+                page.querySelector('.content-paragraph').textContent = 'Nuovo paragrafo';
+                page.querySelector('.content-paragraph2').textContent = 'Nuovo secondo paragrafo';
+
             }
         });
 
