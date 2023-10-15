@@ -1,0 +1,263 @@
+<div class="sectionTitle">
+  <h1>Gallery</h1>
+  <p class="text"> A collection of shots and unique moments to discover this fantastic place </p>
+  <button class="btn_gallery">Show Gallery</button>
+</div>
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="images/cosenza/pic_cs_1.JPG" alt="Image 1">
+        <!-- <div class="caption">Caption for Image 1</div> -->
+    </div>
+    <!-- Repeat for other gallery items -->
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_2.jpg" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_4.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+        <img src="images/cosenza/pic_cs_5.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_6.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_7.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+        <img src="images/cosenza/pic_cs_8.jpg" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_9.jpg" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_10.jpg" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+        <img src="images/cosenza/pic_cs_11.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_12.jpg" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_13.JPG" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_14.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_15.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_16.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_17.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_18.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_19.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_20.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_21.png" alt="Image 1">
+    </div><div class="gallery-item">
+      <img src="images/cosenza/pic_cs_22.jpg" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_23.png" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="images/cosenza/pic_cs_24.png" alt="Image 1">
+    </div>
+</div>
+
+  <!-- Lightbox or modal for enlarged images -->
+<!-- <div class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" src=""> -->
+                                            <!-- <div class="lightbox-container">
+                                                <span class="close">&times;</span>
+                                                <img class="lightbox-content" src="">
+                                            </div> -->
+<!-- <div class="caption"></div>
+</div> -->
+
+  <style>
+  .gallery {
+    display: grid;
+    height: fit-content;
+    width: 100% !important;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 10px;
+    overflow: hidden;
+    padding-bottom: 5%;
+    text-align: center;
+      /* Additional styling */
+  }
+
+  .sectionTitle{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5% 7% 0% 7%;
+  }
+
+  h1{
+    color: var(--text-gray);
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-family: Montserrat;
+  }
+
+  hr{
+    display: block;
+    width: 100%;
+    height: 0.25rem;
+    margin: 0.125rem 0 0.875rem 0;
+    background: var(--color-ats-primary);
+    border: none;
+    
+  }
+
+  .gallery-item {
+      align-items: center !important;
+      justify-content: center !important;
+      position: relative;
+      cursor: pointer;
+      padding-top: 5%;
+      border-radius: 20px;
+      overflow: hidden;
+
+      /* Styling for each item */
+  }
+
+  /* .gallery-item:hover img{
+    border-radius: 20px;
+    scale: 1;
+  } */
+
+  .gallery-item img {
+    border-radius: 20px;
+    max-width: 100%; /* Limita la larghezza massima all'interno del contenitore */
+    max-height: 100%; /* Limita l'altezza massima all'interno del contenitore */
+    
+    /* transition: all 0.4s ease-in-out; */
+  }
+  /* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Styling for lightbox */
+}
+
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+    display: block;
+    margin: 0 auto;
+    transform: translateY(15vh); /* Sposta l'immagine giù di 10vh */
+}
+/* .lightbox-container {
+    max-width: 85vw;
+    max-height: 85vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+} */
+
+  /* Styling for close button and caption */
+  .close {
+      position: absolute;
+      top: 10%;
+      left: 90%;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 2;
+  }
+
+  .caption {
+      color: rgb(0, 0, 0);
+      text-align: center;
+      margin-top: 10px;
+      /* Styling for caption */
+  }
+
+  .btn_gallery {
+    color:  var(--gunmetal);
+    margin: 1.8em;
+    border: 2px solid  var(--gunmetal);
+    background:  white;
+    border-radius: 2em;
+    padding: 1em 3em;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .btn_gallery:hover {
+    background-color: rgba(51, 60, 70, 0.3);
+  }
+
+  .gallery-item {
+      display: none;
+  }
+
+  </style>
+
+
+  <script>
+
+  const galleryItems = document.querySelectorAll(".gallery-item");
+  const lightbox = document.querySelector(".lightbox");
+  const lightboxContent = document.querySelector(".lightbox-content");
+  const lightboxCaption = document.querySelector(".caption");
+  const closeBtn = document.querySelector(".close");
+  const galleryBtn = document.querySelector(".btn_gallery");
+
+
+  galleryBtn.addEventListener("click", function() {
+      // Seleziona tutti gli elementi con la classe "hidden" e li mostra
+      // var immaginiNascoste = document.querySelectorAll(".hidden");
+      for (var i = 0; i < galleryItems.length; i++) {
+          galleryItems[i].style.display = "block";
+      }
+      // Nascondi il pulsante dopo aver mostrato le immagini
+      this.style.display = "none";
+  });
+  // galleryItems.forEach((item, index) => {
+  //     item.addEventListener("click", () => {
+  //         lightbox.style.display = "block";
+  //         lightboxContent.src = item.querySelector("img").src;
+  //         lightboxCaption.textContent = item.querySelector(".caption").textContent;
+  //     });
+  // });
+
+  // closeBtn.addEventListener("click", () => {
+  //     lightbox.style.display = "none";
+  // });
+
+  // lightbox.addEventListener("click", (event) => {
+  //     if (event.target === lightbox) {
+  //         lightbox.style.display = "none";
+  //     }
+  // });
+  </script>
+
+<script>
+  // Funzione per mostrare le immagini quando viene cliccato il pulsante
+ 
+</script>
