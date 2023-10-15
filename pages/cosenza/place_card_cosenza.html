@@ -468,7 +468,9 @@ function addMarkersToSource(mpSet) {
 
         marker.getElement().addEventListener('click', () => {
             console.log(name_marker);
-            document.querySelector('#c1').style.display = "block";
+            if (name_marker === "Amantea") {
+                document.querySelector('#c1').style.display = "block";
+            }
         });
 
 
